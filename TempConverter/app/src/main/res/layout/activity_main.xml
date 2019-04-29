@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/farLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="155dp"
+        android:lineSpacingExtra="12sp"
+        android:text="@string/fahrenheit"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:visibility="visible"
+        app:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/degrees"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="93dp"
+        android:ems="20"
+        android:text="@string/degrees"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/celsius"
+        app:layout_constraintEnd_toEndOf="@+id/farEditText"
+        app:layout_constraintStart_toStartOf="@+id/farEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/celsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:lineSpacingExtra="12sp"
+        android:text="@string/celsius"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="@+id/farLeft"
+        app:layout_constraintTop_toBottomOf="@+id/farLeft" />
+
+    <EditText
+        android:id="@+id/farEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/celTextView"
+        app:layout_constraintStart_toEndOf="@+id/farLeft"
+        app:layout_constraintTop_toBottomOf="@+id/degrees" />
+
+    <TextView
+        android:id="@+id/CelTextView"
+        android:layout_width="129dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:text="@string/celTextView"
+        app:layout_constraintEnd_toEndOf="@+id/degrees"
+        app:layout_constraintStart_toEndOf="@+id/farLeft"
+        app:layout_constraintTop_toBottomOf="@+id/farEditText" />
+
+</android.support.constraint.ConstraintLayout>
